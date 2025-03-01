@@ -1,0 +1,149 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* Header Styling */
+header {
+    background: #007BFF;
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+    color: #d4e3ff;
+}
+
+/* Main Content */
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+/* Complaints Grid Layout */
+#complaints-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Complaint Card Styling */
+.complaint-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 280px;
+}
+
+.complaint-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.complaint-card h3 {
+    margin-bottom: 10px;
+    color: #222;
+    font-size: 20px;
+}
+
+.complaint-card p {
+    flex-grow: 1;
+    margin: 8px 0;
+    color: #555;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* Link Styling */
+.complaint-card a {
+    color: #007BFF;
+    text-decoration: none;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    display: block;
+    font-size: 14px;
+}
+
+.complaint-card a:hover {
+    text-decoration: underline;
+    color: #0056b3;
+}
+
+/* Share Button */
+.share-btn {
+    background: #28a745;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+.share-btn:hover {
+    background: #218838;
+}
+
+/* Footer Styling */
+footer {
+    background: #343a40;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 20px;
+}
+
+.footer-content {
+    max-width: 800px;
+    margin: auto;
+}
+
+.footer-links a {
+    color: #f8f9fa;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}

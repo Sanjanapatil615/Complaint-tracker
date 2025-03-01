@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complaint Details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        .complaint-container {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            text-decoration: none;
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="complaint-container">
+        <h2 id="complaint-title"></h2>
+        <p id="complaint-description"></p>
+        <p><strong>Source:</strong> <a id="complaint-source" href="#" target="_blank"></a></p>
+        <p id="complaint-full-description"></p>
+        <a href="index.html">⬅ Go Back</a>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const urlParams = new URLSearchParams(window.location.search);
+            const title = decodeURIComponent(urlParams.get("title") || "");
+            const description = decodeURIComponent(urlParams.get("description") || "");
+            const source = decodeURIComponent(urlParams.get("source") || "");
+            const fullDescription = decodeURIComponent(urlParams.get("fullDescription") || "");
+
+            document.getElementById("complaint-title").textContent = title;
+            document.getElementById("complaint-description").textContent = description;
+            document.getElementById("complaint-source").href = source;
+            document.getElementById("complaint-source").textContent = source;
+            document.getElementById("complaint-full-description").textContent = fullDescription;
+        });
+    </script>
+</body>
+</html>
